@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+    <link rel="stylesheet" href="../static/info.css">
+</head>
+<body>
+
+    <div class="container">
+         <div class="title">
+             <header>
+                 <h1>INFORMATION OF CLIMATE VISIBILITY PREDICTION</h1>
+             </header>
+         </div>
+
+         <div class="back-page">
+            <a href="{{ url_for ('home') }}" , methods = "GET">
+                <input class="button" type="submit"  value="⬅Back TO home page" name="" >
+            </a>
+        </div>
+        <br>
+
+         <div class="Content">
+             <div class="what">
+                 <h1>What is a Campus Recruitment?</h1>
+             </div>
+
+             <div class="what-ans">
+                 <p>
+                     This data set consists of various factors that can decide if the weather is clear or not or we can say that the visibility for human eyes is good or not.
+                 </p>
+             </div>
+
+
+             <div class ="app-info">
+                 <h1>App Info</h1>
+             </div>
+
+             <div class="app-information">
+                 <p>
+                     The following files are part of the NOAA Weather Data - JFK Airport hosted on IBM Developer Data Asset eXchange and it contains 9 columns and more than 75000 rows.
+                 </p>
+                 <p>
+                     Here we consider features like Drybulb Temp, Month, Sea level pressure to determine the weather.so based on some of this factors
+                     one can see if the weather is clear or foggy.Here I have divided the weather visibility into three categories based on the factors above mentioned.
+                     I have categorized the weather into Weather with Less Visibility,Weather with Moderate visibility and Weather with Highest Visibility thus making this a
+                     classification problem.
+                 </p>
+                 <p>
+                     Further we can also analyze the data and then can help us understands the climatic conditions that have foggy weather.
+
+                 </p>
+             </div>
+
+         </div>
+
+
+         <div class="foot">
+             <footer><marquee>Copyright © 2021 by Adityaraj Hemant Chaudhari</marquee></footer>
+         </div>
+
+     </div>
+
+</body>
+</html>

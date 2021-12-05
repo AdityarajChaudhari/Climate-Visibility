@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <header>
+                <h1>VISIBILITY PREDICTION</h1>
+            </header>
+        </div>
+
+        <div class="back-page">
+            <a href="{{ url_for ('home') }}" , methods = "GET">
+                <input class="button" type="submit"  value="⬅Back TO home page" name="">
+            </a>
+        </div>
+
+
+
+        <div class="my-form">
+
+            <form>
+
+                <label class="dry">DRYBULB TEMP(F)</label><br><br>
+                <input class="dry-i" type="number" name="dry" placeholder="Temp(F)"  step="0.01"  min="1" max="102" required="required"><br>
+
+                <label class="rel">RELATIVE HUMIDITY</label><br><br>
+                <input class="rel-i" type="number" name="rel" placeholder="Rel.Humidity"  step="0.01"  min="1" max="102" required="required"><br>
+
+                <label class="speed">WINDSPEED</label><br><br>
+                <input class="spd-i" type="number" name="spd" placeholder="Wind Speed"  step="0.01"  min="0" max="53" required="required"><br>
+
+                <label class="dir">WIND DIRECTION</label><br><br>
+                <input class="dir-i" type="number" name="dir" placeholder="Wind Direction"  step="0.01"  min="0" max="360" required="required"><br>
+
+                <label class="pre">STATION PRESSURE</label><br><br>
+                <input class="pre-i" type="number" name="pre" placeholder="Station Pressure"  step="0.01"  min="0" max="35" required="required"><br>
+
+                <label class="preci">PRECIPITATION</label><br><br>
+                <input class="preci-i" type="number" name="preci" placeholder="Precipitation"  step="0.01"  min="0" max="3" required="required"><br>
+
+                <label class="mon">Month</label><br><br>
+                <select class="mon-i" name="mon" id="mon" required="required">
+                <option disabled selected value>  - select -  </option>
+                <option value="January" >January</option>
+                <option value="February" >February</option>
+                <option value="March" >March</option>
+                <option value="April" >April</option>
+                <option value="May" >May</option>
+                <option value="June" >June</option>
+                <option value="July" >July</option>
+                <option value="August" >August</option>
+                <option value="September" >September</option>
+                <option value="October" >October</option>
+                <option value="November" >November</option>
+                <option value="December" >December</option>
+                </select><br>
+                <br>
+
+                <button  type="reset" class="reset-but">Reset</button>
+
+                <br><br>
+
+
+                <button  formaction="{{url_for ('predict')}}" formmethod="post" type="submit" class="submit-but" value="predict">Predict</button>
+
+
+
+                <div class="foot">
+                <footer>Copyright © 2021 by Adityaraj Hemant Chaudhari</footer>
+                </div>
+            </form>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
